@@ -20,3 +20,14 @@ const examplePerson: Person = {
 };
 
 printPersonInfo(examplePerson);
+
+// Generics:
+function swap<T>(a: T, b: T): [T, T] {
+    return [b, a];
+}
+
+const swappedNumbers = swap(5, 10);
+console.log(`Swapped numbers: ${swappedNumbers[0]}, ${swappedNumbers[1]}`);
+
+const swappedStrings = swap("hello", "world");
+console.log(`Swapped strings: ${swappedStrings[0]}, ${swappedStrings[1]}`);
